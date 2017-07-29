@@ -15,3 +15,9 @@
 ```
 # sudo pbuilder login --save-after-login
 ```
+
+### LOgin ke dalam base.tgz spesifik, kemudian simpan saat logout
+
+```
+# sudo pbuilder login --save-after-login --basetgz /path/to/base.tgz
+```
