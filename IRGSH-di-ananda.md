@@ -44,3 +44,18 @@ $ sudo ./bin/irgsh-repo -l DEBUG
 ```
 
 
+## Sidik gangguan
+
+### Kode sumber tidak dapat diunduh
+
+Galatnya seperti berikut
+
+```
+[2017-08-07 06:59:41,400: WARNING/PoolWorker-7] [Errno 13] Permission denied: '/run/irgsh-logs'
+```
+dan 
+```
+Specification initialization failed: 'NoneType' object has no attribute 'write'
+```
+
+Dikarenakan direktori `/run/irgsh-logs` tidak ada. Setelah dibuat lalu mesin dimulai-ulang, direktori ini akan hilang dan perlu dibuat lagi. Jalan lupa permission baca tulisnya disetel juga.
