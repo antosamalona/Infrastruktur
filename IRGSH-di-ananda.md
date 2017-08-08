@@ -59,3 +59,7 @@ Specification initialization failed: 'NoneType' object has no attribute 'write'
 ```
 
 Dikarenakan direktori `/run/irgsh-logs` tidak ada. Setelah dibuat lalu mesin dimulai-ulang, direktori ini akan hilang dan perlu dibuat lagi. Jalan lupa permission baca tulisnya disetel juga.
+
+### Galat memori'Memory exeption'
+
+Jika terjadi galat memori akan tampil pesan ```<type> memory exeption ``` solusinya adalah dengan menambah kapasitas memori di mesin.
