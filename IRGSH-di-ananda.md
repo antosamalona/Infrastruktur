@@ -62,4 +62,4 @@ Dikarenakan direktori `/run/irgsh-logs` tidak ada. Setelah dibuat lalu mesin dim
 
 ### Galat memori'Memory exeption'
 
-Jika terjadi galat memori akan tampil pesan ```<type> memory exeption ``` solusinya adalah dengan menambah kapasitas memori di mesin.
+Jika terjadi galat memori akan tampil pesan `<type> memory exeption ` solusinya adalah dengan menambah kapasitas memori di mesin.
