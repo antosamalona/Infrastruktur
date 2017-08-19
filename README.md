@@ -1,2 +1,3 @@
 # Infrastruktur
-Dokumentasi dan catatan sidik gangguan (trouble sooting untuk tim Infrastruktur
+
+Dokumentasi dan catatan sidik gangguan (troubleshooting) untuk tim Infrastruktur.
