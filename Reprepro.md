@@ -116,3 +116,14 @@ $ reprepro -v -v -v -v update uluwatu
 ```
 
 
+## Sidik gangguan
+
+### Kunci untuk tanda tangan tidak ditemukan
+
+```
+Could not find any key matching '9120A048'!
+ERROR: Could not finish exporting 'uluwatu'!
+There have been errors!
+```
+
+Pastikan kunci GPG-nya ada dan sudah ditentukan path-nya di conf/options. Pastikan juga user yang menjalankan reprepro punya hak baca ke direktori GPG tersebut.
