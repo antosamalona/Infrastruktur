@@ -60,6 +60,10 @@ Specification initialization failed: 'NoneType' object has no attribute 'write'
 
 Dikarenakan direktori `/run/irgsh-logs` tidak ada. Setelah dibuat lalu mesin dimulai-ulang, direktori ini akan hilang dan perlu dibuat lagi. Jalan lupa permission baca tulisnya disetel juga.
 
+```
+sudo mkdir -p /run/irgsh-logs && sudo chmod a+rw /run/irgsh-logs
+```
+
 
 ### X not installed
 
