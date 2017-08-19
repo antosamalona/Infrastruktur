@@ -1,6 +1,4 @@
-# Pasang Reprepro untuk pengembangan
-
-Berikut adalah tutorial untuk membuat repo mengunakan reprepro. Ini dibutuhkan oleh pabrik cd untuk menjahit iso.  Ditutorial ini menggunakan distro ubuntu 16.04
+Berikut adalah tutorial untuk membuat repo mengunakan reprepro. Ini dibutuhkan oleh pabrik cd untuk menjahit iso.  Di tutorial ini menggunakan distro ubuntu 16.04
 
 ### Buat user arsipdev
 ```sh
