@@ -46,6 +46,14 @@ $ sudo ./bin/irgsh-repo -l DEBUG
 
 ## Sidik gangguan
 
+### error:140B0002:SSL routines:SSL_CTX_use_PrivateKey_file:system
+
+```
+[2017-08-26 23:39:48,111: ERROR/MainProcess] Consumer: Connection Error: [Errno 336265218] _ssl.c:347: error:140B0002:SSL routines:SSL_CTX_use_PrivateKey_file:system lib. Trying again in 4 seconds...
+```
+
+Cek sertifikat dan kunci private milik builder terkait. Berkas sertifikat dan kunci tersebut mesti bisa dibaca oleh user yang menjalankan builder / irgsh-node.
+
 ### Unduhan via source type Git macet
 
 Cek ke log taskinit, jawab yes, 
