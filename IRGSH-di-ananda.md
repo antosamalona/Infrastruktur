@@ -46,6 +46,32 @@ $ sudo ./bin/irgsh-repo -l DEBUG
 
 ## Sidik gangguan
 
+### Build macet di Waiting for Initialization
+
+Cek ke log taskinit, lengkapi yang kurang. Contoh galat yang mungkin terjadi, 
+
+```
+[2017-08-26 22:38:43,807: DEBUG/PoolWorker-8] Channel open
+[2017-08-26 22:38:43,814: DEBUG/PoolWorker-8] Closed channel #1
+[2017-08-26 22:38:43,852: ERROR/MainProcess] Task irgsh_web.build.tasks.InitSpecification[43f0e563-48e3-4759-8bd0-c9978360b2b4] raised exception: ImportError('No module named lzma',)
+Traceback (most recent call last):
+  File "/home/irgsh-web/.pyenv/versions/irgsh-web/lib/python2.6/site-packages/celery/execute/trace.py", line 34, in trace
+    return cls(states.SUCCESS, retval=fun(*args, **kwargs))
+  File "/home/irgsh-web/.pyenv/versions/irgsh-web/lib/python2.6/site-packages/celery/task/base.py", line 241, in __call__
+    return self.run(*args, **kwargs)
+  File "/home/irgsh-web/irgsh-web/irgsh_web/build/tasks.py", line 33, in run
+    init.start()
+  File "/home/irgsh-web/irgsh-web/irgsh_web/build/utils.py", line 179, in start
+    def start(self):
+  File "/home/irgsh-web/irgsh-web/irgsh/source/__init__.py", line 1, in <module>
+    from .packager import SourcePackageBuilder
+  File "/home/irgsh-web/irgsh-web/irgsh/source/packager.py", line 10, in <module>
+    import lzma
+ImportError: No module named lzma
+
+None
+```
+
 ### Kode sumber tidak dapat diunduh
 
 Galatnya seperti berikut
