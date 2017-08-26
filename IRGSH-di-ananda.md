@@ -46,6 +46,19 @@ $ sudo ./bin/irgsh-repo -l DEBUG
 
 ## Sidik gangguan
 
+### Unduhan via source type Git macet
+
+Cek ke log taskinit, jawab yes, 
+
+```
+[2017-08-26 23:21:20,448: DEBUG/MainProcess] Mediator: Running callback for task: irgsh_web.build.tasks.UploadSource[c55c0fbf-6822-4f1f-8505-dd22aa8ac8a3]
+[2017-08-26 23:21:20,449: DEBUG/MainProcess] TaskPool: Apply <function execute_and_trace at 0x562655c397d0> (args:('irgsh_web.build.tasks.UploadSource', 'c55c0fbf-6822-4f1f-8505-dd22aa8ac8a3', (9721, [u'aglfn_1.7-3blankon1.dsc', u'aglfn_1.7.orig.tar.gz', u'aglfn_1.7-3blankon1.debian.tar.xz']), {}) kwargs:{'hostname': 'taskinit', 'request': {'retries': 0, 'loglevel': 10, 'delivery_info': {'consumer_tag': u'2', 'routing_key': u'celery', 'exchange': u'celery'}, 'is_eager': False, 'taskset': None, 'logfile': None, 'id': 'c55c0fbf-6822-4f1f-8505-dd22aa8ac8a3'}})
+[2017-08-26 23:21:20,450: DEBUG/MainProcess] Task accepted: irgsh_web.build.tasks.UploadSource[c55c0fbf-6822-4f1f-8505-dd22aa8ac8a3] pid:14269
+The authenticity of host '[irgsh.blankonlinux.or.id]:2222 ([119.82.243.189]:2222)' can't be established.
+ECDSA key fingerprint is SHA256:/Pw5PuRr/9yLdJ3rsh+PQocooznhj9XfxL30gARbmqU.
+Are you sure you want to continue connecting (yes/no)? yes
+```
+
 ### Build macet di Waiting for Initialization
 
 Cek ke log taskinit, lengkapi yang kurang. Contoh galat yang mungkin terjadi, 
