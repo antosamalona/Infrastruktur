@@ -142,3 +142,7 @@ dpkg: dependency problems prevent configuration of pbuilder-satisfydepends-dummy
 ```
 
 Masuk ke base.tgz ( dengan opsi --save-after-login dan --save-after-exec), lalu pasang paket terkait. Saat logout, perubahan akan tersimpan. Ulangi buildnya.
+
+### No suitable builder found
+
+Hal ini disebabkan karena irgsh belum dapat menerima '''linux-any'''. Oleh karena itu, '''linux-any''' diganti menjadi '''any''' ketika terdapat pada '''architecture''' dan dihapus jika terdapat di dependensi paket.
