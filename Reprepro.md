@@ -1,30 +1,28 @@
-# Pasang Reprepro untuk pengembangan
+Berikut adalah tutorial untuk membuat repo mengunakan reprepro. Ini dibutuhkan oleh pabrik cd untuk menjahit iso.  Di tutorial ini menggunakan distro ubuntu 16.04
 
-Berikut adalah tutorial untuk membuat repo mengunakan reprepro. Ini dibutuhkan oleh pabrik cd untuk menjahit iso.  Ditutorial ini menggunakan distro ubuntu 16.04
-
-##### Buat user arsipdev
+### Buat user arsipdev
 ```sh
 # adduser arsipdev
 ```
-##### Pindah user dari root ke arsipdev
+### Pindah user dari root ke arsipdev
 ```sh
 $ su - arsipdev
 ```
-##### Install BZR
+### Install BZR
 ```sh
 $ sudo apt install bzr
 ```
-##### Tarik config reprepro dari bzr 
+### Tarik config reprepro dari bzr 
 ```sh
 $ bzr branch http://dev.blankonlinux.or.id/browser/infrastruktur/reprepro-config-rani-debian
 $ cd reprepro-config-rani-debian/
 ```
 
-##### Edit distributions
+### Edit distributions
 ```sh
 $ vim distributions
 ```
-##### Isi dengan berikut 
+### Isi dengan berikut 
 ```sh
 Origin: BlankOn
 Label: BlankOn
@@ -91,11 +89,11 @@ ContentsUComponents: main
 Log: uluwatu-security.log
  --type=dsc changelogs
 ```
-##### lalu save , kemudian edit pulls
+### lalu save , kemudian edit pulls
 ```sh
 $ vim pulls
 ```
-##### isi dengan berikut : 
+### isi dengan berikut : 
 ```sh
 Name: pull.uluwatu
 From: tambora
@@ -106,15 +104,26 @@ From: tambora-updates
 Name: pull.uluwatu-security
 From: tambora-security
 ```
-##### lalu commit & push
+### lalu commit & push
 ```sh
 $ bzr commit -m "keterangan commit"
 $ bzr push bzr+ssh://bzr@dev.blankonlinux.or.id:2222/bzr/infrastruktur//reprepro-config-rani-debian
 ```
 
-##### update repo 
+### update repo 
 ```sh
 $ reprepro -v -v -v -v update uluwatu
 ```
 
 
+## Sidik gangguan
+
+### Kunci untuk tanda tangan tidak ditemukan
+
+```
+Could not find any key matching '9120A048'!
+ERROR: Could not finish exporting 'uluwatu'!
+There have been errors!
+```
+
+Pastikan kunci GPG-nya ada dan sudah ditentukan path-nya di conf/options. Pastikan juga user yang menjalankan reprepro punya hak baca ke direktori GPG tersebut.
